@@ -3,9 +3,9 @@ title: "如何快速搭建自己的博客网站"
 description: "前段时间将我的博客开源后，陆陆续续的收到很多朋友的喜欢，也有朋友在部署或自定义时遇到了各种各样的问题，更收到了快 50 岁的非专业程序员的邮件咨询，很是开心"
 pubDate: "2024-08-16 16:40:00"
 category: "life"
-banner: "@images/posts/gblog/0-gblog.png"
-banner2: "@images/posts/gblog/8-rundev.png"
-ogImage: "@images/posts/gblog/0-gblog.png"
+banner: "@images/services/gblog/0-gblog.png"
+banner2: "@images/services/gblog/8-rundev.png"
+ogImage: "@images/services/gblog/0-gblog.png"
 tags: ["Astro", "博客"]
 ---
 
@@ -43,7 +43,10 @@ GitHub 的 fork 允许你快速的在自己的账号下创建一个和原项目�
 项目 fork 完成后，登录你的 Cloudflare 账号。在左侧菜单栏找到 Workers & Pages，然后新建一个 Page。具体步骤可以参考这个[文档](https://docs.astro.build/en/guides/deploy/cloudflare/#how-to-deploy-a-site-with-git)，也可以参考下面的视频片段。注意在选择 **Production branch** 时为了节省 build 时间可以选择 `gblog-template` 分支。
 
 <video controls>
-  <source src="https://github.com/user-attachments/assets/c8556b49-d7a4-43fa-9a7f-5a27db5c74f8" type="video/mp4" />
+    <source
+        src="https://github.com/user-attachments/assets/c8556b49-d7a4-43fa-9a7f-5a27db5c74f8"
+        type="video/mp4"
+    />
 </video>
 
 部署成功后，你可通过 Cloudflare 提供的默认域名访问我们刚刚创建的博客，如果一切正常，你能看到一个很好的博客页面如 https://gblog-test-1.pages.dev。
@@ -80,7 +83,7 @@ tags: ["标签1", "标签2"]
 3. 如果你想添加&删除更多的分类，请直接修改 `src/content/categories` 下面的文件
 4. 文章的封面图(banner)可以是在线图片地址如 https://example.com/a.png
 5. 文章的封面图(banner)如果是本地图片，需要放到 `src/images/` 目录下
-   1. 如你在 `src/images` 目录下新创建了一个文件夹 `hello` 并且把一张图片如 `banner1.png` 放了进去，那你这篇文章的 banner 字段可配置为：`@images/hello/banner1.png`，注意前面有个 `@` 符号
+    1. 如你在 `src/images` 目录下新创建了一个文件夹 `hello` 并且把一张图片如 `banner1.png` 放了进去，那你这篇文章的 banner 字段可配置为：`@images/hello/banner1.png`，注意前面有个 `@` 符号
 
 下面请看一个例子。我们新建了一个 `hello.md` 的文件，当所有内容都准备好了并点击第四步 Commit changes 后；由于我们在第一步时已经成功部署到了 Cloudflare 平台，所以如果这里不出意外的话当你提交代码后，你的修改会自动部署到 Cloudflare。待其部署成功后，就可以通过如 https://example.com/posts/hello 访问刚刚新增的博客内容。
 
@@ -129,41 +132,45 @@ npm run dev
 
 最后一条命令运行成功后，你应该能看到一个如下的提示，这意味着我们的博客已经成功在本地运行。你可以访问 http://localhost:4321/ 查看本地预览版本，也可以用自己感兴趣的编辑器如 Sublime Text、VSCode、IDEA 打开并编辑它们。
 
-![rundev](@images/posts/gblog/8-rundev.png)
+![rundev](@images/services/gblog/8-rundev.png)
 
 本地修改完成后，你可以通过下面的方式将这些新的改变提交到 GitHub：
 
 ```bash
 git add .
 git commit -m "简短的描述下本次修改的内容"
-git push 
+git push
 ```
 
-不论你是将你的博客部署到  Zeabur、Vercel 还是 Cloudflare，它们在你提交代码后都会自动部署，这通常是由于平台服务商在我们首次集成时已经为我们自动设置好了相应的触发器，所以才能提交代码后就自动部署。
+不论你是将你的博客部署到 Zeabur、Vercel 还是 Cloudflare，它们在你提交代码后都会自动部署，这通常是由于平台服务商在我们首次集成时已经为我们自动设置好了相应的触发器，所以才能提交代码后就自动部署。
+
 ## 如何自定义
 
 默认的博客模版包含了很多预设的配置如 Logo/评论/SEO，默认的文案等，请使用你任何喜欢的编辑器打开源代码并编辑它们。
+
 ### 自定义配置
 
 博客大多数的配置都定义在 `src/config.ts` 文件中，你可以修改它们为任何你期望的样子：
 
 ```typescript
 export const SITE: Site = {
-    author: 'Godruoyi',
-    url: 'https://godruoyi.com',
-    title: '连波的闲谈杂鱼',
-    description: 'Godruoyi\'s personal blog, I enjoy the process of building something using any technology stack',
-}
+    author: "Godruoyi",
+    url: "https://godruoyi.com",
+    title: "连波的闲谈杂鱼",
+    description:
+        "Godruoyi's personal blog, I enjoy the process of building something using any technology stack",
+};
 ```
+
 ### 自定义图片
 
 目前博客使用下面几张图片作为系统图片，请用你自己的图片替换它们；如果需要修改文件名，请全局搜索所有相关的文件名并一起替换。
 
 ```
-src/images/brand_logo.jpeg        Logo 
-src/images/default_home_og.png    分享博客首页到社交平台如 Twitter 展示的分享图片 
+src/images/brand_logo.png         Logo
+src/images/default_home_og.png    分享博客首页到社交平台如 Twitter 展示的分享图片
 src/images/favicon_icon.png       ICON
-src/images/favicon_icon.svg       ICON SVG 格式 
+src/images/favicon_icon.svg       ICON SVG 格式
 src/images/footer.png             页面底部右侧显示的展位图
 src/images/home.png               首页头部图片
 ```
@@ -184,15 +191,15 @@ export const Settings = {
         // enable: !!(import.meta.env.COMMENT_ENABLE),
         enable: true,
         giscus: {
-            repo: 'godruoyi/gblog',
-            repoId: 'MDEwOlJlcG9zaXRvcnkxMjcyODI0NzA',
-            category: 'Announcements',
-            categoryId: 'DIC_kwDOB5YtJs4CfZnX',
-            darkThem: 'noborder_gray',
-            lightThem: 'light',
+            repo: "godruoyi/gblog",
+            repoId: "MDEwOlJlcG9zaXRvcnkxMjcyODI0NzA",
+            category: "Announcements",
+            categoryId: "DIC_kwDOB5YtJs4CfZnX",
+            darkThem: "noborder_gray",
+            lightThem: "light",
         },
     },
-}
+};
 ```
 
 ### 将资源上传到 S3 加速访问
@@ -203,17 +210,17 @@ export const Settings = {
 // src/config.ts
 export const Settings = {
     Assets: {
-        uploadAssetsToS3: !!(import.meta.env.S3_ENABLE),
+        uploadAssetsToS3: !!import.meta.env.S3_ENABLE,
         config: {
-            paths: ['assets'],
+            paths: ["assets"],
             endpoint: import.meta.env.S3_ENDPOINT as string,
             bucket: import.meta.env.S3_BUCKET as string,
             accessKey: import.meta.env.S3_ACCESS_KEY as string,
             secretAccessKey: import.meta.env.S3_SECRET_ACCESS_KEY as string,
-            root: 'gblog',
+            root: "gblog",
         },
     },
-}
+};
 ```
 
 上述配置的含义是将编译后的 assets 文件夹下的所有文件上传到 S3 服务器的 gblog 文件夹下，这通常需要配合修改 astro.config.mjs 文件如下：
@@ -222,10 +229,10 @@ export const Settings = {
 // astro.config.mjs
 export default defineConfig({
     build: {
-        assets: 'assets',
-        assetsPrefix: 'https://images.godruoyi.com/gblog',
+        assets: "assets",
+        assetsPrefix: "https://images.godruoyi.com/gblog",
     },
-})
+});
 ```
 
 即通过 build 配置告诉 astro 在编译时将资源文件全部打包到 assets 文件夹下，编译完成后会程序自动调用 [astro-uploader](https://github.com/syhily/astro-uploader) 将这些文件上传到 S3；所以我们还需要告诉 Astro 使用 S3 的路径如 https://images.godruoyi.com/gblog 作为前缀。
@@ -237,8 +244,10 @@ export default defineConfig({
 博客的 UI 使用的是 [Preline UI](https://preline.co/)，你可以从它们的 [Example](https://preline.co/examples.html) 或者 [Template](https://preline.co/templates.html) 中 copy 你想要的样式文件并直接粘贴到 gblog 中，这通常不需要做过多的修改就能 clone 你看到的效果。
 
 ## 参考
+
 - [如何复刻本网站，零氪快速建博客 | Cali Castle](https://cali.so/blog/guide-for-cloning-my-site)
 - [Download Node.js](https://nodejs.org/en/download/prebuilt-installer)
+
 * [Download Git](https://git-scm.com/downloads)
 * [Markdown 教程](https://www.markdowntutorial.com/zh-cn/)
 * [如何在 Windows 10 中打开命令提示符](https://www.freecodecamp.org/chinese/news/how-to-open-the-command-prompt-in-windows-10-how-to-open-command-prompt-as-an-administrator/)

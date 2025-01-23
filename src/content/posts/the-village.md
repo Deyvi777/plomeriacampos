@@ -3,8 +3,8 @@ title: "没人抬"
 description: "乡里人怕的，是自己死了后，找不到人抬，我不明白。"
 pubDate: "2024-08-09 13:54:00"
 category: "life"
-banner: "@images/posts/the-village/banner2.png"
-banner2: "@images/posts/the-village/banner1.png"
+banner: "@images/services/the-village/banner2.png"
+banner2: "@images/services/the-village/banner1.png"
 tags: ["生活"]
 ---
 
@@ -22,4 +22,4 @@ tags: ["生活"]
 
 我不知道如何回复电话那头这样的质问，我也不明白所谓的人情世故到底是什么，我只是更愿意过好自己的生活。
 
-关于乡里人的风土人情，你可以看看我之前的[老家的变化](https://godruoyi.com/posts/the-changes-in-my-hometown/)，而乡里人对办酒的热爱，从[办酒](https://godruoyi.com/posts/banjiu/)可见一般。
+关于乡里人的风土人情，你可以看看我之前的[老家的变化](https://godruoyi.com/services/the-changes-in-my-hometown/)，而乡里人对办酒的热爱，从[办酒](https://godruoyi.com/services/banjiu/)可见一般。

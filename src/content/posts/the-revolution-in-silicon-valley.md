@@ -11,7 +11,7 @@ oldKeywords: ["null"]
 
 > 终于看完了两年前就买下的这本书。很难想象，当初的这群狂热分子，竟然是这样做出世上最伟大的产品的。
 
-![file](https://images.godruoyi.com/posts/202003/07/_1583578626_MU8lTqVTh3.png)
+![file](https://images.godruoyi.com/services/202003/07/_1583578626_MU8lTqVTh3.png)
 
 真挺羡慕的，能置身那样的时代，参与划时代的产品开发。那时候的团队氛围和对产品艺术的追求，
 

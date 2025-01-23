@@ -13,9 +13,9 @@ oldKeywords: ["null"]
 
 目前比较常用的为 `Let's Encrypt` 生成证书的工具比较多，如
 
-* [acme-tiny](https://github.com/diafygi/acme-tiny)
-* [certbot](https://github.com/certbot/certbot)
-* [acme.sh](https://github.com/Neilpang/acme.sh)
+- [acme-tiny](https://github.com/diafygi/acme-tiny)
+- [certbot](https://github.com/certbot/certbot)
+- [acme.sh](https://github.com/Neilpang/acme.sh)
 
 这里我们将使用 [acme.sh](https://github.com/Neilpang/acme.sh) 这个工具来安装 `Let's Encrypt` 证书。`acme.sh` 是一个非常优秀的证书生成工具，其 [官网](https://github.com/Neilpang/acme.sh) 更是有详细的中文文档支持 。
 
@@ -53,7 +53,7 @@ acme.sh  --renew   -d mydomain.com
 
 在 [这里申请 API Token](https://www.dnspod.cn/console/user/security)，获取到 `ID` 及 `Token` 后执行：
 
-![file](https://images.godruoyi.com/posts/201806/21/1_1529590937_4rCg5hX0qu.png)
+![file](https://images.godruoyi.com/services/201806/21/1_1529590937_4rCg5hX0qu.png)
 
 ```bash
 export DP_Id="id"
@@ -64,7 +64,7 @@ export DP_Key="token"
 
 在 [这里申请阿里云 Accesskey](https://ak-console.aliyun.com/#/accesskey)
 
-![file](https://images.godruoyi.com/posts/201806/21/1_1529591195_ryE5GiaXNP.png)
+![file](https://images.godruoyi.com/services/201806/21/1_1529591195_ryE5GiaXNP.png)
 
 获取到 `KEY` 及 `Secret` 后执行下面命令：
 
@@ -87,7 +87,7 @@ export Ali_Secret="jlsdflanljkljlfdsaklkjflsa"
 
 证书生成成功后，默认保存在 `.acme.sh/你的顶级域名` 中。
 
-PS：如果你卡在  Getting domain auth token for each domain 这一步不动了，别担心，升级下你的 acme.sh 就好了。
+PS：如果你卡在 Getting domain auth token for each domain 这一步不动了，别担心，升级下你的 acme.sh 就好了。
 
 ```bash
 .acme.sh/acme.sh --upgrade
@@ -106,7 +106,7 @@ cp ~/.acme.sh/godruoyi.com/godruoyi.com.key /etc/nginx/ssl/godruoyi.key
 
 2、新建 `ssl-params.conf` 并把它放到 Nginx 的 `snippets` 目录中。
 
-> 下面的这些配置来自 [提高安全性的最佳 Nginx 配置](https://godruoyi.com/posts/best-nginx-configuration-for-improved-security)，建议参考。
+> 下面的这些配置来自 [提高安全性的最佳 Nginx 配置](https://godruoyi.com/services/best-nginx-configuration-for-improved-security)，建议参考。
 
 ```vim
 # /etc/nginx/snippets/ssl-params.conf
@@ -206,7 +206,7 @@ server {
 server {
     # 如果多个域名配置在同一主机，这里只需要监听到 433 就可以了，
     # 不需要再添加 ssl http2 fastopen=3 reuseport default_server 之类的了
-    listen 443;      
+    listen 443;
     listen [::]:443;
 
     root /home/godruoyi/websites/admin.godruoyi.com/public-admin;
@@ -244,7 +244,8 @@ sudo service nginx restart
 
 以上所有配置你都可以在 [这里](https://github.com/godruoyi/gblog/blob/master/resources/nginx/) 找到。
 
------------
+---
+
 参考链接
 
-* [腾讯云DNSPod API申请Let’s Encrypt泛域名证书](https://cloud.tencent.com/developer/article/1064471)
+- [腾讯云DNSPod API申请Let’s Encrypt泛域名证书](https://cloud.tencent.com/developer/article/1064471)

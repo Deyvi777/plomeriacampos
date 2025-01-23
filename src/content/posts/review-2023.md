@@ -11,7 +11,8 @@ selected: true
 oldKeywords: ["2023"]
 ---
 
-# 
+#
+
 我在楼上写今年的总结，窗外在下雪。
 
 ## Life
@@ -30,7 +31,7 @@ oldKeywords: ["2023"]
 
 所以从今年开始，我开始做一些**自己觉得很有趣**的小项目；如果这些小项目又恰巧能满足一部分人的需求的话，那我就更开心了。得益于强大的 GPT，我们能非常快速的从零经验上手任意一门语言。在学完 [Rustlings](https://github.com/rust-lang/rustlings) 后，我开始给 [Xuanwo](https://github.com/Xuanwo) 的 [reqsign](https://github.com/Xuanwo/reqsign) 贡献 [PR](https://github.com/Xuanwo/reqsign/pulls?q=is:pr+is:closed+author:godruoyi)；当初的想法是先混个脸熟然后再打入内部最后被顺利招安，因为我对 Remote/OpenSource 十分感兴趣；现在想起来也是十分滑稽，路肯定是行得通的，只是怪自己没能坚持下来。
 
-![file](https://images.godruoyi.com/posts/202402/09/kc2OjTBKwSoCUzvAcavmlpGqmxX7BQyrKQtufDKi.png)
+![file](https://images.godruoyi.com/services/202402/09/kc2OjTBKwSoCUzvAcavmlpGqmxX7BQyrKQtufDKi.png)
 
 接下来我用 Rust 写了我的第一个小项目 [Laravel Tips](https://github.com/godruoyi/laravel-tips)，可以在终端展示各种有趣和生涩的提示；后来在推友的建议下我又写了一个 [Laravel Tips Raycast](https://github.com/godruoyi/laravel-tips-raycast) 扩展；Bing Dalle-2/3 出来后，我又基于 yihong 大哥的 [tg_bing_dalle](https://github.com/yihong0618/tg_bing_dalle)写了一个起床机器人 [Wakeup](https://github.com/godruoyi/wakeup)；而最近我正在写一个浏览器扩展 [Readog](https://github.com/godruoyi/readog)，它可以将你的链接保存到任何平台。我很享受整个过程，很多时候都是当孩子睡着后我就迫不及待的冲到电脑旁敲下在脑子里过了很多遍的最佳实践。我觉得对于工程师来说，将自己的想法一步步实现出来，不限语言，不限技术，这本身就是一件十分美妙的事情。
 
@@ -42,11 +43,11 @@ oldKeywords: ["2023"]
 
 我一直觉得机会是留给行动起来的人的，站在岸上学不会游泳。我并不是一个行动派，就拿每次推着孩子出去因为路口被私家车挡着的事儿来说，我每次都是嘴上骂两句，即使心里想过很多遍市长信箱投诉，交通执法大队举报，却每次都没有实际行动起来。我希望来年我能行动起来，如果某一个市政的改善有你的功劳，那未尝不是一件有趣的事儿呢。
 
-
 就写到这吧，春晚太吵了。
 
 ## 往年总结
-- [2022 年终总结](https://godruoyi.com/posts/review-of-2022)
-- [2021 年终总结](https://godruoyi.com/posts/review-2021)
-- [2020 年终总结](https://godruoyi.com/posts/2020-year-end-review)
-- [2019 年度总结](https://godruoyi.com/posts/continue-refueling-in-2019)
+
+- [2022 年终总结](https://godruoyi.com/services/review-of-2022)
+- [2021 年终总结](https://godruoyi.com/services/review-2021)
+- [2020 年终总结](https://godruoyi.com/services/2020-year-end-review)
+- [2019 年度总结](https://godruoyi.com/services/continue-refueling-in-2019)

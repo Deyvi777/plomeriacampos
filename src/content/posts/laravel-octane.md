@@ -18,6 +18,7 @@ Laravel Octane 已经发布好几周了，虽说目前还处于 beta 状态，�
 为了体验一把加速的魔力，作者已拿一个简单的 H5 项目在生产环境下试了试水，除了一些乱七八糟的问题，其他的都令作者激动不已，客户还表示我们的平台好快啊，下次还找你。
 
 ## Laravel Octane 的组成
+
 Laravel Octane 内置了两个高性能的应用服务：[Swoole](https://swoole.co.uk/) 和 [RoadRunner](https://roadrunner.dev/)，正如官方文档介绍的：
 
 > Octane boots your application once, keeps it in memory, and then feeds it requests at supersonic speeds.
@@ -27,6 +28,7 @@ Laravel Octane 内置了两个高性能的应用服务：[Swoole](https://swoole
 Laravel Octane 需要 PHP8.0 支持，如果你是在 macOS 下工作，你可以参考这篇文章来更新你的 PHP 版本 [Upgrade to PHP 8 with Homebrew on Mac](https://stitcher.io/blog/php-8-upgrade-mac)。
 
 ## Octane 简单示列
+
 虽说官方文档已经描述的很详细，不过作者这里还是通过一个简单的示列项目来演示。
 
 ### Create Laravel Application
@@ -82,8 +84,8 @@ HTTP/2 403  returned for "https://api.github.com/repos/spiral/roadrunner-binary/
 
 如果你也遇到了这样的错误，建议直接去 [RoadRunner 官网](https://github.com/spiral/roadrunner-binary/releases) 下载对应平台的 rr 可执行文件及 .rr.yaml 配置文件并放到项目根目录。如 macOS 平台的可执行文件及配置文件地址：
 
-* https://github.com/spiral/roadrunner-binary/releases/download/v2.1.0/roadrunner-2.1.0-darwin-amd64.zip
-* https://github.com/spiral/roadrunner-binary/blob/v2.1.0/.rr.yaml
+- https://github.com/spiral/roadrunner-binary/releases/download/v2.1.0/roadrunner-2.1.0-darwin-amd64.zip
+- https://github.com/spiral/roadrunner-binary/blob/v2.1.0/.rr.yaml
 
 最后记得修改 rr 的可执行权限及 RoadRunner 的 Worker starting command。
 
@@ -93,10 +95,10 @@ chmod +x ./rr
 
 ```yaml
 server:
-  # Worker starting command, with any required arguments.
-  #
-  # This option is required.
-  command: "php artisan octane:start --server=roadrunner --host=127.0.0.1 --port=8000"
+    # Worker starting command, with any required arguments.
+    #
+    # This option is required.
+    command: "php artisan octane:start --server=roadrunner --host=127.0.0.1 --port=8000"
 ```
 
 ### ssl_valid: key file '/ssl/server.key' does not exists
@@ -126,11 +128,11 @@ temporal:
 php artisan octane:start —server=roadrunner —host=127.0.0.1 —port=8000
 ```
 
-2. Service.some_service_*.comment
+2. Service.some*service*\*.comment
 
 如果你不想使用该特性，注释该配置。至此，作者的 RoadRunner **终于**启动起来了。
 
-![Laravel Octane RoadRunner](https://images.godruoyi.com/posts/202104/29/XgEntLO1b4ouj3TG9Hv3T7H63GNQibLQBwNzH7sx.png)
+![Laravel Octane RoadRunner](https://images.godruoyi.com/services/202104/29/XgEntLO1b4ouj3TG9Hv3T7H63GNQibLQBwNzH7sx.png)
 
 ### AB Test For RoadRunner
 
@@ -238,7 +240,7 @@ Total:          1    3   8.8      2     143
 
 Swoole server 的使用就要顺畅多了；通过 pecl 安装好 PHP swoole 扩展后，无需任何配置就能启动。
 
-![Laravel Swoole](https://images.godruoyi.com/posts/202104/29/4fZ6XuboeSdtVIjCYrG6Pk9tXE9tc20oywd0Z5kA.png)
+![Laravel Swoole](https://images.godruoyi.com/services/202104/29/4fZ6XuboeSdtVIjCYrG6Pk9tXE9tc20oywd0Z5kA.png)
 
 ### AB Test For Swoole Server
 
@@ -300,6 +302,7 @@ Transfer rate:          425.55 [Kbytes/sec] received
 从 AB Test 结果来看，两种 Server 的性能基本持平；但由于是在本地开发环境测试，未考虑到的因素较多，测试结果仅供参考。
 
 ## 部署上线
+
 Laravel Octane 虽然提供了 start 命令用于启动 Server，但该命令只能在前台运行（不支持 -d）；在部署到生产环境时，常见的办法还是利用 [Supervisor](http://supervisord.org/) 来进行进程管理。读者可以参考 [Laravel Sail](https://github.com/laravel/sail/blob/1.x/runtimes/8.0/supervisord.conf) 的 Supervisor 配置。
 
 ```
@@ -334,15 +337,17 @@ sudo supervisorctl -c /etx/supervisorctl.conf restart program:php
 否则可能会出现如 Class "Godruoyi\Snowflake\Snowflake" not found 的错误。
 
 ## Laravel Octane 是线程安全的吗？
+
 在回答这个问题之前，我们先来看看 Laravel Octane 的请求处理流程。
 
-![Laravel Octane](https://images.godruoyi.com/posts/202104/29/GUz7CA0H2G9SR2GXbiWHvvkQfkuyeUr5lXsMTE2b.png)
+![Laravel Octane](https://images.godruoyi.com/services/202104/29/GUz7CA0H2G9SR2GXbiWHvvkQfkuyeUr5lXsMTE2b.png)
 
 随着 Server 的启动，程序会创建指定数量的 Worker 进程。当请求到来时，会从可用的 Worker 列表中选取一个并交由他处理。每个 Worker 同一时刻只能处理一个请求，在请求处理过程中，对资源（变量/静态变量/文件句柄/链接）的修改并不会存在竞争关系，所以 Laravel Octane 时线程(进程)安全的。
 
 这其实和 FPM 模型是一致的，不同的地方在于 FPM 模型在处理完一个请求后，会销毁该请求申请的所有内存；后续请求到来时，依然要执行完整的 PHP 初始化操作（参考 [PHP-FPM 启动分析](https://tadimy.gitbooks.io/php-internals/content/php-fpm-start-up.html)）。而 Laravel Octane 的初始化操作是随着 Worker Boot 进行的，在整个 Worker 的生命周期内，只会进行一次初始操作（程序启动的时候）。后续请求将直接复用原来的资源。如上图，Worker Boot 完成后，将会初始化 Laravel Application Container，而后续的所有请求，都将复用该 App 实例。
 
 ## Laravel Octane 工作原理
+
 Octane 只是一个壳，真正处理请求都是由外部的 Server 处理的。不过 Octane 的设计还是值得一说的。
 
 从源码也可以看出，随着 Worker 的 Boot 完成，Laravel Application 已被成功初始化。
@@ -370,7 +375,7 @@ public function handle(Request $request, RequestContext $context): void
     CurrentApplication::set($sandbox = clone $this->app);
 
     try {
-        $response = $sandbox->make(Kernel::class)->handle($request); 
+        $response = $sandbox->make(Kernel::class)->handle($request);
 
     } catch (Throwable $e) {
         $this->handleWorkerError($e, $sandbox, $request, $context, $responded);
@@ -387,6 +392,7 @@ public function handle(Request $request, RequestContext $context): void
 > 再次注意，由于同一个 Worker 进程同一时刻只能处理一个请求，故这里是不存在竞争的，即使是对 static 变量的修改，也是安全的。
 
 ## 注意事项 & 第三方包适配
+
 由于同一个 Worker 的多个请求会共享同一个容器实例，所以在向容器中注册单例对象时，应该特别小心。如下面的例子：
 
 ```php
@@ -421,9 +427,10 @@ $service->method($request->input('name'));
 强烈推荐读者阅读官方提出的[注意事项](https://github.com/laravel/octane#container-injection)。
 
 ## 参考
-* Upgrade to PHP 8 with Homebrew on Mac https://stitcher.io/blog/php-8-upgrade-mac
-* Laravel Octane https://github.com/laravel/octane
-* Laravel Sail https://github.com/laravel/sail
-* FastCgi 与 PHP-fpm 之间的关系 https://godruoyi.com/posts/the-relationship-between-fastcgi-and-php-fpm
-* PHP-FPM vs Swoole https://developpaper.com/php-fpm-vs-swoole/
-* Swoole 编程须知 https://wiki.swoole.com/#/getting_started/notice
+
+- Upgrade to PHP 8 with Homebrew on Mac https://stitcher.io/blog/php-8-upgrade-mac
+- Laravel Octane https://github.com/laravel/octane
+- Laravel Sail https://github.com/laravel/sail
+- FastCgi 与 PHP-fpm 之间的关系 https://godruoyi.com/services/the-relationship-between-fastcgi-and-php-fpm
+- PHP-FPM vs Swoole https://developpaper.com/php-fpm-vs-swoole/
+- Swoole 编程须知 https://wiki.swoole.com/#/getting_started/notice

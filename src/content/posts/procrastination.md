@@ -15,11 +15,11 @@ oldKeywords: ["生活,ocr,php-ocr,tencent-ocr,aliyun-ocr,baidu-ocr"]
 
 ~~一年后觉得自己技术牛逼了，知识过硬了~~ ，打算重新发布个版本，已更新下那难看的 last commit，随便慰藉自己当初开源的初衷 ~~吗~~ 。
 
-![file](https://images.godruoyi.com/posts/202011/20/XxGFVtWBpE1oZrXOKMilhvyEAC37wY5Rz54ICxE8.png)
+![file](https://images.godruoyi.com/services/202011/20/XxGFVtWBpE1oZrXOKMilhvyEAC37wY5Rz54ICxE8.png)
 
 然后大刀阔斧的开整，结果婚结完了，朋友朋友的婚都结完了、两年过去了，我才重构了 20%。
 
-![file](https://images.godruoyi.com/posts/202011/20/0sOuuR4nm7niUNczcpwxX0akfS03wOeWWRzM45gs.png)
+![file](https://images.godruoyi.com/services/202011/20/0sOuuR4nm7niUNczcpwxX0akfS03wOeWWRzM45gs.png)
 
 趁着现在大家都去旅游去了而我还在公司上班的打工命，噼里啪啦完成了 2.0 的改造，算是完成了今年的一番壮举吧。
 

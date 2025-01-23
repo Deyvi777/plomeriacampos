@@ -15,13 +15,13 @@ oldKeywords: ["null"]
 
 外观是最重要的，一个好的主题会让你爱上完美。这里推荐 [Material Theme](http://equinsuocha.io/material-theme/)
 
-![file](https://images.godruoyi.com/posts/201909/24/_1569340531_wzgl3oXMKl.png)
+![file](https://images.godruoyi.com/services/201909/24/_1569340531_wzgl3oXMKl.png)
 
 ## Operator
 
 是不是感觉字体不好看，咳不出来又咽不下去，试试这款吧 [Operator](https://www.typography.com/fonts/operator/styles/)，号称贵到灵魂出窍的等宽编程字体(@JokerLinly)，一套只需 `$599.0`。:smile: 我还是用我的默认字体吧！
 
-![file](https://images.godruoyi.com/posts/201909/24/_1569340566_wQolvwi4WT.png)
+![file](https://images.godruoyi.com/services/201909/24/_1569340566_wQolvwi4WT.png)
 
 ## Alignment
 
@@ -33,7 +33,7 @@ oldKeywords: ["null"]
 { "keys": ["ctrl+alt+0"], "command": "alignment" }
 ```
 
-![file](https://images.godruoyi.com/posts/201909/24/_1569340586_2SOJxMa275.gif)
+![file](https://images.godruoyi.com/services/201909/24/_1569340586_2SOJxMa275.gif)
 
 ## AdvancedNewFile
 
@@ -48,7 +48,7 @@ oldKeywords: ["null"]
 { "keys": ["alt+."], "command": "advanced_new_file_copy" }  //复制当前文件的内容到一个新文件
 ```
 
-![file](https://images.godruoyi.com/posts/201909/24/_1569340614_IbQrHDZsH3.gif)
+![file](https://images.godruoyi.com/services/201909/24/_1569340614_IbQrHDZsH3.gif)
 
 ## EditorConfig
 
@@ -80,21 +80,21 @@ trim_trailing_whitespace = false
 
 > 若你没有把 `php` 及 `python` 加入环境变量，你可能要在 `SublimeLinter` 的配置文件中指定 `python` 及 `php` 的执行路径。
 
-![file](https://images.godruoyi.com/posts/201909/24/_1569340682_DMJlNwtfia.gif)
+![file](https://images.godruoyi.com/services/201909/24/_1569340682_DMJlNwtfia.gif)
 
 ## Phpcs
 
 关于 PHPCS的介绍及安装请 [戳这里](https://learnku.com/articles/5646/php-series-code-sniffer-for-code-specification)
 
-![file](https://images.godruoyi.com/posts/201909/24/_1569340734_Q5ZoetnMcZ.gif)
+![file](https://images.godruoyi.com/services/201909/24/_1569340734_Q5ZoetnMcZ.gif)
 
 ## 其他
 
-* All Autocomplete
-* ConvertToUTF8
-* DocBlockr
-* Emmet
-* Git
-* GitGutter
-* Laravel 5 Artisan
-* SideBarEnhancements
+- All Autocomplete
+- ConvertToUTF8
+- DocBlockr
+- Emmet
+- Git
+- GitGutter
+- Laravel 5 Artisan
+- SideBarEnhancements

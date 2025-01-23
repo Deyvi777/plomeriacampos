@@ -13,7 +13,7 @@ oldKeywords: ["laravel-faker,laravel中文支持"]
 
 > 在 `Laravel` 中使用 `Faker` 构造假数据时，默认的输出为英文格式，如下
 
-![file](https://images.godruoyi.com/posts/201908/31/_1567223760_pdSKfVH2DK.png)
+![file](https://images.godruoyi.com/services/201908/31/_1567223760_pdSKfVH2DK.png)
 
 可通过在 `config/app.php` 增加如下配置使其支持中文。
 
@@ -23,12 +23,11 @@ oldKeywords: ["laravel-faker,laravel中文支持"]
 
 修改后再次执行效果如下：
 
-![file](https://images.godruoyi.com/posts/201908/31/_1567223770_zCV5eHOy9L.png)
+![file](https://images.godruoyi.com/services/201908/31/_1567223770_zCV5eHOy9L.png)
 
 > 今天在使用 `Faker` 构造数据时，纳闷为什么不能是中文，查看 [官方扩展包](https://github.com/fzaninotto/Faker) 原来早就支持了啊。（是我孤陋寡闻了呀，赶紧分享给没发现的同学）
-> 
+>
 > 目前 `Laravel >= 5.7` 已经在 `config\app.php` 中默认添加了 `faker_locale` 配置。
-
 
 ## Laravel DatabaseServiceProvider
 

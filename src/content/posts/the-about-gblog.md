@@ -17,31 +17,30 @@ oldKeywords: ["二愣的闲谈杂鱼"]
 
 ## 更新
 
-* 2021-08 你目前看到的博客运行在一个 1 核 2 G 的云服务器上；采用 Gin 框架快速搭建，静态资源全部放在 CDN 上
-
+- 2021-08 你目前看到的博客运行在一个 1 核 2 G 的云服务器上；采用 Gin 框架快速搭建，静态资源全部放在 CDN 上
 
 ### 前台
 
-前台的单页应用架构主要参考「抄」 [@overtrue](https://github.com/overtrue) 和 [@cjjian](https://pigjian.com/) 一起写的项目 [一刻](https://github.com/yikeio/yike), 虽然该项目已经停止维护了，但大神的思路还是很值得去学习的。关于 `yike` 的更多信息可以去看看  [@cjjian](https://pigjian.com/)  的介绍贴 [PJ Blog 升级 & Yike 项目介绍](https://laravel-china.org/topics/5863/laravel-55-release-pj-blog-upgrade-yike-project-presentation)
+前台的单页应用架构主要参考「抄」 [@overtrue](https://github.com/overtrue) 和 [@cjjian](https://pigjian.com/) 一起写的项目 [一刻](https://github.com/yikeio/yike), 虽然该项目已经停止维护了，但大神的思路还是很值得去学习的。关于 `yike` 的更多信息可以去看看 [@cjjian](https://pigjian.com/) 的介绍贴 [PJ Blog 升级 & Yike 项目介绍](https://laravel-china.org/topics/5863/laravel-55-release-pj-blog-upgrade-yike-project-presentation)
 
 贴两张博客截图
 
-* 首页
+- 首页
 
-![二愣的闲谈杂鱼](https://images.godruoyi.com/posts/202103/25/30k6TLH03yerhMMb0231cXQpkIOtCC0kq1ZpcOZU.png)
+![二愣的闲谈杂鱼](https://images.godruoyi.com/services/202103/25/30k6TLH03yerhMMb0231cXQpkIOtCC0kq1ZpcOZU.png)
 
-* 文章详情页
+- 文章详情页
 
-![file](https://images.godruoyi.com/posts/202103/25/iWMRDUxC0GRFnLEPDH0BHQs8LVXDZZVhVQekH0E3.png)
+![file](https://images.godruoyi.com/services/202103/25/iWMRDUxC0GRFnLEPDH0BHQs8LVXDZZVhVQekH0E3.png)
 
 ### 后台
 
-后台完全是基于  [Voyager](https://github.com/the-control-group/voyager) 快速搭建的。
+后台完全是基于 [Voyager](https://github.com/the-control-group/voyager) 快速搭建的。
 
-![二愣的闲谈杂鱼](https://images.godruoyi.com/posts/202103/25/6y9lzk3huJEzHzzPFaXf7HdSbmSKjX4CiQSfH7E9.png)
+![二愣的闲谈杂鱼](https://images.godruoyi.com/services/202103/25/6y9lzk3huJEzHzzPFaXf7HdSbmSKjX4CiQSfH7E9.png)
 
-![二愣的闲谈杂鱼](https://images.godruoyi.com/posts/202103/25/iKMijnrjP9Gg7OQlvQpJ7IgoOu9EcArRVA34z6Fq.png)
+![二愣的闲谈杂鱼](https://images.godruoyi.com/services/202103/25/iKMijnrjP9Gg7OQlvQpJ7IgoOu9EcArRVA34z6Fq.png)
 
-------
+---
 
 最后附上 Blog 地址 [godruoyi.com](http://godruoyi.com)。:smile: :smile:

@@ -3,8 +3,8 @@ title: "什么是发件箱模式"
 description: "早上在群里看到有同事在问关于 Outbox Pattern 的问题，而在此之前我对此一无所知，我甚至还错误的发了一些毫不相干的回复，那就姑且把 Outbox Pattern 当作今天 TIL 的对象吧，下面是本次学习的记录"
 pubDate: "2024-08-04 15:43:00"
 category: "whatis"
-banner: "@images/posts/outbox-pattern/banner1.jpg"
-banner2: "@images/posts/outbox-pattern/banner1.png"
+banner: "@images/services/outbox-pattern/banner1.jpg"
+banner2: "@images/services/outbox-pattern/banner1.png"
 tags: ["技术"]
 ---
 
@@ -30,7 +30,7 @@ db.Transact(func(tx *sqlx.Tx) {
 
 ## 什么是 Outbox Pattern？
 
-我们知道大多数数据库都能保证两条 SQL 操作要么全都成功，要么全都失败，参见[为什么我们需要数据库事务](https://godruoyi.com/posts/why-do-we-need-database-transactions/)；如果我们能将「发送消息到队列」这一操作转化为 —— 插入一条数据到数据库；我们就能利用数据库的特性来保证数据的完整性，然后再利用额外的程序来异步读取数据并发送到 Kafka。
+我们知道大多数数据库都能保证两条 SQL 操作要么全都成功，要么全都失败，参见[为什么我们需要数据库事务](https://godruoyi.com/services/why-do-we-need-database-transactions/)；如果我们能将「发送消息到队列」这一操作转化为 —— 插入一条数据到数据库；我们就能利用数据库的特性来保证数据的完整性，然后再利用额外的程序来异步读取数据并发送到 Kafka。
 
 ```go
 db.Transact(func(tx *sqlx.Tx) {
@@ -39,7 +39,7 @@ db.Transact(func(tx *sqlx.Tx) {
 })
 ```
 
-![outbox pattern](@images/posts/outbox-pattern/outbox-pattern.png)
+![outbox pattern](@images/services/outbox-pattern/outbox-pattern.png)
 图片来自于 [Outbox Pattern Example](https://github.com/debezium/debezium-examples/tree/main/outbox)
 
 ### 这样做有什么好处？
@@ -107,13 +107,13 @@ Debezium 为不同的数据库都提供了不同的 Connector，以 PostgreSQL C
 我们可以参考[这里的例子](https://debezium.io/documentation/reference/2.7/tutorial.html#starting-kafka-connect)通过 Docker 启动一个 Connector，启动成功后 Connector 会对外暴露一个 REST API，可以通过向这个 API POST 一些配置告诉 Connector 应该如何处理数据库变更。
 
 ```
-$ docker run -it --rm --name connect -p 8083:8083 
--e GROUP_ID=1 
--e CONFIG_STORAGE_TOPIC=my_connect_configs 
--e OFFSET_STORAGE_TOPIC=my_connect_offsets 
--e STATUS_STORAGE_TOPIC=my_connect_statuses 
---link kafka:kafka 
---link mysql:mysql 
+$ docker run -it --rm --name connect -p 8083:8083
+-e GROUP_ID=1
+-e CONFIG_STORAGE_TOPIC=my_connect_configs
+-e OFFSET_STORAGE_TOPIC=my_connect_offsets
+-e STATUS_STORAGE_TOPIC=my_connect_statuses
+--link kafka:kafka
+--link mysql:mysql
 quay.io/debezium/connect:2.7
 ```
 
@@ -121,17 +121,17 @@ quay.io/debezium/connect:2.7
 
 ```json
 {
-  "name": "fulfillment-connector",  
-  "config": {
-    "connector.class": "io.debezium.connector.postgresql.PostgresConnector", 
-    "database.hostname": "192.168.99.100", 
-    "database.port": "5432", 
-    "database.user": "postgres", 
-    "database.password": "postgres", 
-    "database.dbname" : "postgres", 
-    "topic.prefix": "fulfillment", 
-    "table.include.list": "public.inventory" // 监控的数据表
-  }
+    "name": "fulfillment-connector",
+    "config": {
+        "connector.class": "io.debezium.connector.postgresql.PostgresConnector",
+        "database.hostname": "192.168.99.100",
+        "database.port": "5432",
+        "database.user": "postgres",
+        "database.password": "postgres",
+        "database.dbname": "postgres",
+        "topic.prefix": "fulfillment",
+        "table.include.list": "public.inventory" // 监控的数据表
+    }
 }
 ```
 
@@ -139,11 +139,11 @@ quay.io/debezium/connect:2.7
 
 ```json
 {
-  "name": "fulfillment-connector",  
-  "config": {
-    "table.include.list": "public.outbox_table", // 监控的数据表
-    "tombstones.on.delete": false
-  }
+    "name": "fulfillment-connector",
+    "config": {
+        "table.include.list": "public.outbox_table", // 监控的数据表
+        "tombstones.on.delete": false
+    }
 }
 ```
 
@@ -168,10 +168,11 @@ db.Transact(func(tx *sqlx.Tx) {
 4. 今天就学到这儿了
 
 ## 参考
-* [Publishing Events to Kafka using an Outbox Pattern](https://medium.com/contino-engineering/publishing-events-to-kafka-using-a-outbox-pattern-867a48e29d35)
-* [Reliable Microservices Data Exchange With the Outbox Pattern - must read](https://debezium.io/blog/2019/02/19/reliable-microservices-data-exchange-with-the-outbox-pattern/)
-* [Pattern: Transactional outbox](https://microservices.io/patterns/data/transactional-outbox.html)
-* [Debezium connector for PostgreSQL](https://debezium.io/documentation/reference/2.7/connectors/postgresql.html#debezium-connector-for-postgresql)
-* [Tutorial :: Debezium Documentation](https://debezium.io/documentation/reference/2.7/tutorial.html#introduction-debezium)
-* [Read-your-write consistency](https://arpitbhayani.me/blogs/read-your-write-consistency/)
-* [为什么我们需要数据库事务](https://godruoyi.com/posts/why-do-we-need-database-transactions/)
+
+- [Publishing Events to Kafka using an Outbox Pattern](https://medium.com/contino-engineering/publishing-events-to-kafka-using-a-outbox-pattern-867a48e29d35)
+- [Reliable Microservices Data Exchange With the Outbox Pattern - must read](https://debezium.io/blog/2019/02/19/reliable-microservices-data-exchange-with-the-outbox-pattern/)
+- [Pattern: Transactional outbox](https://microservices.io/patterns/data/transactional-outbox.html)
+- [Debezium connector for PostgreSQL](https://debezium.io/documentation/reference/2.7/connectors/postgresql.html#debezium-connector-for-postgresql)
+- [Tutorial :: Debezium Documentation](https://debezium.io/documentation/reference/2.7/tutorial.html#introduction-debezium)
+- [Read-your-write consistency](https://arpitbhayani.me/blogs/read-your-write-consistency/)
+- [为什么我们需要数据库事务](https://godruoyi.com/services/why-do-we-need-database-transactions/)

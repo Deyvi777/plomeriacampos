@@ -11,7 +11,7 @@ oldKeywords: ["null"]
 
 > Nginx 配置二级目录并不像 apache 那么简单，但二级目录的配置在实际工作中又经常用到，现整理如下。
 
-1. 在 `/etc/nginx` 目录下创建文件夹  sublocations，用于存放所有二级目录的配置：
+1. 在 `/etc/nginx` 目录下创建文件夹 sublocations，用于存放所有二级目录的配置：
 
 ```bash
 sudo mkdir -p /etc/nginx/sublocations
@@ -67,7 +67,7 @@ server {
     # ....
 
     server_name example.com;
-	
+
     location / {
         try_files $uri $uri/ 404;
     }
@@ -88,6 +88,6 @@ sudo nginx -s reload  # 重启服务
 
 更多 Nginx 的配置请参考：
 
-* [提高安全性的最佳 Nginx 配置](https://godruoyi.com/posts/best-nginx-configuration-for-improved-security)
-* [Let’s Encrypt 泛域名证书申请及配置](https://godruoyi.com/posts/let-s-encrypt-generic-domain-name-certificate-application-and-configuration)
-* [Nginx 配置跨越支持](https://godruoyi.com/posts/nginx-configuration-across-support)
+- [提高安全性的最佳 Nginx 配置](https://godruoyi.com/services/best-nginx-configuration-for-improved-security)
+- [Let’s Encrypt 泛域名证书申请及配置](https://godruoyi.com/services/let-s-encrypt-generic-domain-name-certificate-application-and-configuration)
+- [Nginx 配置跨越支持](https://godruoyi.com/services/nginx-configuration-across-support)

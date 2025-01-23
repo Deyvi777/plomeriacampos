@@ -3,8 +3,8 @@ title: "美国"
 description: "昨天晚上开了一个小时的会，受益良多；以下只是我的感悟，请不要信以为真。"
 pubDate: "2024-07-05 16:16:00"
 category: "life"
-banner: "@images/posts/america/banner.png"
-banner2: "@images/posts/america/banner2.png"
+banner: "@images/services/america/banner.png"
+banner2: "@images/services/america/banner2.png"
 tags: ["生活", "感悟"]
 ---
 
@@ -26,11 +26,6 @@ J 是我们的老板，当我在闲聊中问到美区公司有没有招中国人
 
 还有一个点我觉得他说的非常有理，那就是发达国家对知识产权的保护。在那里，即使是一位非常普通的员工做出的比较新颖的东西，公司也会花费几百万美元来帮助他申请知识产权；并且公司自老板开始，都会将资源倾斜给这位员工。我猜这也是为什么这么多年来硅谷依然能成为全世界顶尖科技的源头的原因。因为在这里能培养出大量的人才。他们没有任何后顾之忧，公司帮他们解决了几乎一切的生活问题，他们要做的就是全身心的投入自己想做的事业，并开创一个新未来。
 
-这里我又想起了[几年前](https://godruoyi.com/posts/the-revolution-in-silicon-valley/)写下的一段话：1981 年的乔布斯，开着保时捷，Macintosh 团队年薪较低的工程师 22000 美元。
+这里我又想起了[几年前](https://godruoyi.com/services/the-revolution-in-silicon-valley/)写下的一段话：1981 年的乔布斯，开着保时捷，Macintosh 团队年薪较低的工程师 22000 美元。
 
 而想想你在国内公司上班搞个开源还被辞退、拿着月薪 5000 的工资却还想做为人类的伟大胜利而奋斗终身、好不容易实现的 idea 却被别人无情的抄袭。在这样的土地上，又怎么能长出参天大树呢。
-
-
-
-
-

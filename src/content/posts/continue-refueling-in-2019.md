@@ -14,23 +14,26 @@ oldKeywords: ["null"]
 总的来说，今年比 2018 年要过的充实，无论从工作中还是生活上，都越来越向理想的目标近了。
 
 ## 搬家
+
 年初的时候，终于搬进了我们的新家。虽然房子是一年前就买下来的，但当时并没有装修，搁置了一年终于搬进来了。
 
-![file](https://images.godruoyi.com/posts/202001/23/_1579795650_lYwRR1LN5D.png)
+![file](https://images.godruoyi.com/services/202001/23/_1579795650_lYwRR1LN5D.png)
 
 搬进来就意味着要装修，装修这件事可是真累人；原本打算写篇文章纪念的，结果如你看到的，又只写了个开头。
 
 ## 峨眉山
+
 5 月份的时候，我们去峨眉山看日出，这可能是今年最受屡的一次旅行了，不但天气不好下起了小雨，还忍受着累、饿、困、冷、信念崩塌等各种 debuff 缠身。
 
-![峨眉山](https://images.godruoyi.com/posts/201905/22/_1558528125_LN0WQoeMqm.jpeg)
+![峨眉山](https://images.godruoyi.com/services/201905/22/_1558528125_LN0WQoeMqm.jpeg)
 
-为了纪念这次不一样的出行，我还特意写了一篇文章：[峨眉山的日出](https://godruoyi.com/posts/emei-out)
+为了纪念这次不一样的出行，我还特意写了一篇文章：[峨眉山的日出](https://godruoyi.com/services/emei-out)
 
 ## 换个角度看问题
+
 8 月份的时候，作为技术支持，随着商务的同事一起去酉阳蝶石花谷；虽说并没有我什么事，但我还是想写写。
 
-![file](https://images.godruoyi.com/posts/202001/23/_1579795743_PXHMjaJvrK.png)
+![file](https://images.godruoyi.com/services/202001/23/_1579795743_PXHMjaJvrK.png)
 
 作为码农，不应该只关注属于自己模块的功能实现，最好把自己当作为一枚 project owner（虽说自己只是一个 programmer），并了解整个项目的各个周期。
 
@@ -45,36 +48,39 @@ oldKeywords: ["null"]
 从产品来看的话，尝试了解下客户的真实需求，了解下业类成熟的解决方案。并不是所有需求都需要编码才能实现的，有时候引导下客户，说不定技术上很难解决的问题，客户其实根本就不咳er。
 
 ## 三亚
+
 快年底的时候，终于完成了多年的一个愿望————带着爸妈去看海。
 
-![file](https://images.godruoyi.com/posts/202001/23/_1579795751_6xINeZajzX.png)
+![file](https://images.godruoyi.com/services/202001/23/_1579795751_6xINeZajzX.png)
 
 原打算带他们去北京的，因为在我看来，老一辈的人对北京都有一种说不清的情节。但当询问了爸妈的意见后，他们居然选择了三亚。
 
-![file](https://images.godruoyi.com/posts/202001/23/_1579795842_e9xwGRBs86.png)
+![file](https://images.godruoyi.com/services/202001/23/_1579795842_e9xwGRBs86.png)
 
 这趟旅行很开心，回程的路上老妈还有点宁宁不舍，多半是因为我没让她买景区里她看中的纪念品；下次带老人出去玩的时候，站在他们的角度多想想，别管它是假的还是贵的了。
 
 ## 技术
+
 技术方面，今年的技术并没有什么大的提升。虽说从年中开始，就开始尝试用 kubernetes 来部署生产环境应用。但在我看来，不过是在腾讯云提供的上层建筑上修修改改，对底层的逻辑一知半会，如：
 
-* Service 的工作原理
-* Kubernetes 的负载均衡是如何实现的
-* 容器内的网络、DNS是如何工作的
-* master 节点的调度原理
-* PV、PVB 的设计
+- Service 的工作原理
+- Kubernetes 的负载均衡是如何实现的
+- 容器内的网络、DNS是如何工作的
+- master 节点的调度原理
+- PV、PVB 的设计
 
 但也不到不说，从开始使用 kubernetes 以来，一些以前不清楚的逻辑也慢慢清晰出来。
 
-* 容器的工作原理
-* 如何写一个 Dockerfile
-* 用 namespace 和 cgroup 如何实现一个容器
-* 镜像的分层设计及文件的联合挂载
-* Deployment 是如何控制 POD 按期望的方式运行的
+- 容器的工作原理
+- 如何写一个 Dockerfile
+- 用 namespace 和 cgroup 如何实现一个容器
+- 镜像的分层设计及文件的联合挂载
+- Deployment 是如何控制 POD 按期望的方式运行的
 
 其他技术，由于今年交付项目周期太紧，涉及的就太少了，但对 Laravel 的使用程度正在逐步提升，希望明年能成为一个贡献者。
 
 ## TODO 2020
+
 在过去的 2019 年，工作方面我自认为还是比较努力的，但年底突然醒悟，发现有很多方面做的都不是很完善，总结下今年的不足，给来年定几个 flag 吧。
 
 - [ ] 看 5 本非技术相关的书籍

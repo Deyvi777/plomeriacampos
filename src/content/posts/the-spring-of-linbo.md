@@ -19,25 +19,25 @@ oldKeywords: ["四个春天,电影,纪录片,godruoyi"]
 
 再教两老人用微信语音时，两老笑的不亦乐乎。
 
-![file](https://images.godruoyi.com/posts/202011/03/UnJtSqpoVUf6PmPWPiaL98Vw2O98M3Zbe07BjHyA.jpeg)
+![file](https://images.godruoyi.com/services/202011/03/UnJtSqpoVUf6PmPWPiaL98Vw2O98M3Zbe07BjHyA.jpeg)
 
 女儿走了，儿子走了，偌大的一个房子，还好有燕子叽叽喳喳。我能想到当燕子归来后，老头那种小孩似的开心的表情。
 
 老太说，我能陪你一两年是一两年，人到暮年，我们最大的陪伴，就只有老伴了吧。
 
 > 向往这样的日子
-> 
+>
 > 我意愿我老来的时候
-> 
+>
 > 在大山脚下有个房子
-> 
+>
 > 和阿宝种点包谷茄子
-> 
+>
 > 再养一头狗，像电影「百鸟朝凤」里面的妞妞一样，我在田里干活，她给我送饭。
 
 ## Read more
 
-* [四个春天的一些细节，内部人士「爆料」](https://movie.douban.com/review/9896481/)
-* [导演饭叔 - 我妈](https://www.douban.com/note/242582123/)
-* [导演饭叔 - 我爸](https://www.douban.com/note/265025263/)
-* [送饭的妞妞](https://www.bilibili.com/s/video/BV1Zx411u7ei)
+- [四个春天的一些细节，内部人士「爆料」](https://movie.douban.com/review/9896481/)
+- [导演饭叔 - 我妈](https://www.douban.com/note/242582123/)
+- [导演饭叔 - 我爸](https://www.douban.com/note/265025263/)
+- [送饭的妞妞](https://www.bilibili.com/s/video/BV1Zx411u7ei)
