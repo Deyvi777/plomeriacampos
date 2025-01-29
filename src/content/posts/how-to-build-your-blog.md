@@ -34,9 +34,9 @@ tags: ["Astro", "博客"]
 1. 登录你的 GitHub 账号并 Fork 一下 [gblog](https://github.com/godruoyi/gblog/fork) 项目
 2. 注意在 fork 时需要**取消**勾选「Copy the `astro` branch only」
 
-GitHub 的 fork 允许你快速的在自己的账号下创建一个和原项目一模一样的项目；而为什么要取消勾选是因为我们要使用另外的分支(`gblog-template`)来部署；默认的 `astro` 分支包含了我所有的博客文章和图片，它会导致在首次部署时因为需要优化图片而花费很长的时间；当然你也可以使用最新的 astro 分支然后删除 `src/content/posts` 下的数据也加快编译。
+GitHub 的 fork 允许你快速的在自己的账号下创建一个和原项目一模一样的项目；而为什么要取消勾选是因为我们要使用另外的分支(`gblog-template`)来部署；默认的 `astro` 分支包含了我所有的博客文章和图片，它会导致在首次部署时因为需要优化图片而花费很长的时间；当然你也可以使用最新的 astro 分支然后删除 `src/content/services` 下的数据也加快编译。
 
-![fork](@images/posts/gblog/1-fork.png)
+![fork](@images/services/gblog/1-fork.png)
 
 ### Deploy to Cloudflare 2 - Build
 
@@ -55,9 +55,9 @@ GitHub 的 fork 允许你快速的在自己的账号下创建一个和原项目�
 
 静态类型的博客网站并没有一个管理后台来管理博客数据，我们也没有计划为 gblog 添加 CRM 支持。所以如果你想要发布自己的文章，你需要在对应的目录添加一个新文件，一个文件就是一篇博客。
 
-最简单的方式是通过 GitHub 在 `src/content/posts` 文件夹下添加文件，如下所示：
+最简单的方式是通过 GitHub 在 `src/content/services` 文件夹下添加文件，如下所示：
 
-![publish](@images/posts/gblog/2-publish.png)
+![publish](@images/services/gblog/2-publish.png)
 
 文件后缀一般为 `.md` 或许 `.mdx`；博客文章的固定格式如下所示，更多的配置项你可以查看[这里](https://github.com/godruoyi/gblog/blob/astro/src/content/config.ts#L3)的定义：
 
@@ -85,9 +85,9 @@ tags: ["标签1", "标签2"]
 5. 文章的封面图(banner)如果是本地图片，需要放到 `src/images/` 目录下
     1. 如你在 `src/images` 目录下新创建了一个文件夹 `hello` 并且把一张图片如 `banner1.png` 放了进去，那你这篇文章的 banner 字段可配置为：`@images/hello/banner1.png`，注意前面有个 `@` 符号
 
-下面请看一个例子。我们新建了一个 `hello.md` 的文件，当所有内容都准备好了并点击第四步 Commit changes 后；由于我们在第一步时已经成功部署到了 Cloudflare 平台，所以如果这里不出意外的话当你提交代码后，你的修改会自动部署到 Cloudflare。待其部署成功后，就可以通过如 https://example.com/posts/hello 访问刚刚新增的博客内容。
+下面请看一个例子。我们新建了一个 `hello.md` 的文件，当所有内容都准备好了并点击第四步 Commit changes 后；由于我们在第一步时已经成功部署到了 Cloudflare 平台，所以如果这里不出意外的话当你提交代码后，你的修改会自动部署到 Cloudflare。待其部署成功后，就可以通过如 https://example.com/services/hello 访问刚刚新增的博客内容。
 
-![newfile](@images/posts/gblog/3-newfile.png)
+![newfile](@images/services/gblog/3-newfile.png)
 
 ## 如何在线修改项目(可选)
 
@@ -96,7 +96,7 @@ tags: ["标签1", "标签2"]
 1. 将你的项目地址如 https://github.com/godruoyi/gblog 中的域名后缀从 `com` 换为 `dev`
 2. 或者直接在 GitHun 的项目页面按 `.` 键(英文输入法的句号)
 
-![githubdev](@images/posts/gblog/4-githubdev.png)
+![githubdev](@images/services/gblog/4-githubdev.png)
 
 这都将打开一个基于 VSCode 的在线编辑器，你可以在里面修改任何你想修改的内容，更多 github.dev 的用法请参考 [github.dev 基于 web 的编辑器](https://docs.github.com/zh/codespaces/the-githubdev-web-based-editor)。
 
@@ -104,7 +104,7 @@ tags: ["标签1", "标签2"]
 
 在本地启动项目前先确认你安装了 Git；你可以打开你的电脑终端([Windows](https://www.freecodecamp.org/chinese/news/how-to-open-the-command-prompt-in-windows-10-how-to-open-command-prompt-as-an-administrator/) & [MacOS](https://support.apple.com/zh-cn/guide/terminal/apdb66b5242-0d18-49fc-9c47-a2498b7c91d5/mac))并在上面输入如 `git --version` 确认，这通常会输出已安装软件的版本信息，如下面我本地的版本。如果你还没有安装他们，可以点击文末的链接安装它。
 
-![local](@images/posts/gblog/5-local.png)
+![local](@images/services/gblog/5-local.png)
 
 安装成功后在你的终端里执行下面的命令：
 
@@ -113,7 +113,7 @@ git clone git@github.com:yourname/your-blog.git myblog
 ```
 
 Git Clone 命令会将你的项目代码下载到当前运行命令所在目录下的 myblog 文件夹下，**请注意**修改这里的项目地址为你项目的地址，如下：
-![ssh](@images/posts/gblog/7-ssh.png)
+![ssh](@images/services/gblog/7-ssh.png)
 
 这里可以选择 HTTPS 类型的项目地址或者 SSH 类型的，前者在你每次提交代码的时候都需要你输入 GitHub 的账号密码，后者可以免密提交。你可以参考[这里的文章](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account?platform=windows)配置 SSH。
 
@@ -181,7 +181,7 @@ src/images/home.png               首页头部图片
 
 ### 自定义评论
 
-我们目前使用 https://giscus.app/ 作为评论系统，你可以参考 Giscus 官网查看如何配置它们，也可以参考 **liruifengv** 的这篇博客 https://liruifengv.com/posts/add-comments-to-astro/.
+我们目前使用 https://giscus.app/ 作为评论系统，你可以参考 Giscus 官网查看如何配置它们，也可以参考 **liruifengv** 的这篇博客 https://liruifengv.com/services/add-comments-to-astro/.
 
 注意博客评论默认是关闭状态，你可将 COMMENT_ENABLE 环境变量的值设置为 true 或者直接在 src/config.ts 文件中修改它们。
 
