@@ -1,7 +1,6 @@
 ---
 import type { CollectionEntry } from "astro:content";
 import Image from "@components/ui/images/Image.astro";
-import { formatDate } from "@support/time";
 
 const { blog } = Astro.props;
 
@@ -12,7 +11,7 @@ interface Props {
 
 <a
     class="group relative block rounded-xl outline-none ring-zinc-500 transition duration-500 focus-visible:ring dark:ring-zinc-200 dark:focus:outline-none"
-    href={`/posts/${blog.slug}/`}
+    href={`/services/${blog.slug}/`}
     data-astro-prefetch="false"
 >
     <div
@@ -34,9 +33,4 @@ interface Props {
     >
         {blog.data.title}
     </h3>
-    <p
-        class="mt-2 text-sm text-gray-600 dark:text-neutral-400 dark:group-hover:text-neutral-500"
-    >
-        {formatDate(blog.data.pubDate)}
-    </p>
 </a>

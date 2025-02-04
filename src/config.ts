@@ -11,12 +11,12 @@ export const SITE: Site = {
 };
 
 export const NavigationLinks: NavigationLink[] = [
-    { name: "Inicio", url: "/" },
-    { name: "Servicios", url: "/services" },
-    { name: "Acerca de", url: "/services/about" },
-    { name: "Category", url: "/categories" },
-    { name: "Contacto", url: "/contact" },
-    { name: "Friends", url: "/friends" },
+    { name: "INICIO", url: "/" },
+    { name: "SERVICIOS", url: "/services" },
+    { name: "SOBRE NOSOTROS", url: "/services/about" },
+    { name: "VIDEOS", url: "/videos" },
+    { name: "CONTÁCTANOS", url: "/contact" },
+    { name: "PROYECTOS", url: "/projects" },
 ];
 
 export const FooterLinks = [

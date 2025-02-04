@@ -12,16 +12,14 @@ const posts: CollectionEntry<"posts">[] = (await getCollection("posts")).sort(
         b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
 );
 
-const selectedPosts: CollectionEntry<"posts">[] = posts.filter(
-    (p) => p.data.selected
-);
+const selectedPosts: CollectionEntry<"posts">[] = posts.slice(0, 7);
 const description =
     "Here are some articles that Godruoyi believes are not bad, hope you enjoy them.";
 const URL = Astro.url.href;
 ---
 
 <BaseLayout
-    title="All Blogs"
+    title="Servicios"
     description={description}
     structuredData={{
         "@context": "https://schema.org",
@@ -43,8 +41,8 @@ const URL = Astro.url.href;
         title="Servicios"
         subTitle="Brindamos servicios de plomería personalizados para garantizar el mejor funcionamiento de tus instalaciones."
         btnExists={true}
-        btnTitle="All Posts"
-        btnURL="/timeline"
+        btnTitle="Contáctanos"
+        btnURL="/contact"
     />
 
     <BlogRecentCard blogs={posts} />
