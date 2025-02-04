@@ -9,7 +9,7 @@ interface Props {
     blogs: CollectionEntry<'posts'>[]
 }
 
-const posts = blogs.slice(0, 5)
+const posts = blogs.slice(0, 7)
 ---
 
 {
@@ -19,7 +19,7 @@ const posts = blogs.slice(0, 5)
                 title={b.data.title}
                 subTitle={b.data.description}
                 btnExists={true}
-                btnTitle="Read More"
+                btnTitle="Ver más"
                 btnURL=`/services/${b.slug}`
                 img={b.data.banner}
                 imgAlt={b.data.title}
@@ -30,7 +30,7 @@ const posts = blogs.slice(0, 5)
                 title={b.data.title}
                 subTitle={b.data.description}
                 btnExists={true}
-                btnTitle="Read More"
+                btnTitle="Ver más"
                 btnURL=`/services/${b.slug}`
                 img={b.data.banner}
                 imgAlt={b.data.title}

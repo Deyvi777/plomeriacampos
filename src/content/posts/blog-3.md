@@ -1,6 +1,6 @@
 ---
-title: "Blog 的延续"
-description: "最近花了一些时间将我的博客迁移到了 Astro 平台，我感觉整个过程挺美妙的，很喜欢 Astro。"
+title: "Plomería ecológica"
+description: "Implementación de soluciones sostenibles como sistemas de captación de agua de lluvia, reciclaje de aguas grises, calentadores solares y tecnologías de ahorro de agua."
 pubDate: "2024-05-16 13:06:49"
 category: "life"
 banner: "@images/services/blog-3/banner-1.png"
