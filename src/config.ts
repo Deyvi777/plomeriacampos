@@ -14,9 +14,8 @@ export const NavigationLinks: NavigationLink[] = [
     { name: "INICIO", url: "/" },
     { name: "SERVICIOS", url: "/services" },
     { name: "SOBRE NOSOTROS", url: "/services/about" },
-    { name: "VIDEOS", url: "/videos" },
-    { name: "CONTÁCTANOS", url: "/contact" },
     { name: "PROYECTOS", url: "/projects" },
+    { name: "CONTÁCTANOS", url: "/contact" },
 ];
 
 export const FooterLinks = [

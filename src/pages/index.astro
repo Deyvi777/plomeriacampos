@@ -13,7 +13,7 @@ const posts: CollectionEntry<"posts">[] = (await getCollection("posts"))
         (a: CollectionEntry<"posts">, b: CollectionEntry<"posts">) =>
             b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
     )
-    .slice(0, 3);
+    .slice(0, 7);
 ---
 
 <BaseLayout>
@@ -50,6 +50,6 @@ const posts: CollectionEntry<"posts">[] = (await getCollection("posts"))
     <HeroSectionAlt
         title="Contáctanos por WhatsApp"
         subTitle="Escribenos para cualquier consulta"
-        url="https://wa.me/59172746800"
+        url="https://wa.me/59178300509/?text=Hola%2C%20me%20gustaría%20saber%20más%20sobre%20sus%20servicios"
     />
 </BaseLayout>
